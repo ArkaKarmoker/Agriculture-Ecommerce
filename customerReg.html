@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>AGRO</title>
+    <meta content=""
+        name="Agriculture Management System is to help farmers by providing all kinds agriculture related information in the website.">
+    <meta content="Agriculture Management System, AGRO" name="keywords">
+
+    <!-- Favicons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top bg-light shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="index.html">
+                        <h1 class="text-primary m-0">AGRO</h1>
+                    </a>
+                    <!-- Mobile toggle button -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Navbar links -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Home</a>
+                            </li>
+                            <!-- Farmer's Market Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="displaysales.html" id="farmerMarketDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Farmer's Market
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="farmerMarketDropdown">
+                                    <li><a class="dropdown-item" href="displaysales.html">All</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="displaysales.html?category_id=1&category=Fruits">Fruits</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="displaysales.html?category_id=2&category=Vegetables">Vegetables</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- My Account Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    My Account
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                                    <li><a class="dropdown-item" href="customerloginpanel.html">As Customer</a></li>
+                                    <li><a class="dropdown-item" href="farmerreglogin.html">As Farmer</a></li>
+                                    <li><a class="dropdown-item" href="adminloginpanel.html">As Admin</a></li>
+
+                                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                            <!-- Farmer Panel Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="farmerPanelDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Farmer Panel
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="farmerPanelDropdown">
+                                    <li><a class="dropdown-item" href="sellerpanel.html">Farmer Panel</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">My Profile</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="sellerprofile.html">Update Profile</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="Sellerchngpassword.html">Change
+                                                    Password</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Produce</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="Product.html">Put Your Produce On
+                                                    Sale</a></li>
+                                            <li><a class="dropdown-item" href="viewProduct.html">View Your Produce On
+                                                    Sale</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Farm Sales Report</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="sellerpanelchart.html">Progress Chart</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="viewpurchasereport.html">Purchase Billing
+                                                    Report</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    var dropdownSubmenus = document.querySelectorAll('.dropdown-submenu');
+
+                                    dropdownSubmenus.forEach(function (submenu) {
+                                        submenu.addEventListener('mouseenter', function () {
+                                            this.querySelector('.dropdown-menu').classList.add('show');
+                                        });
+
+                                        submenu.addEventListener('mouseleave', function () {
+                                            this.querySelector('.dropdown-menu').classList.remove('show');
+                                        });
+                                    });
+                                });
+                            </script>
+
+                            <!-- Admin Panel Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="adminPanelDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Admin Panel
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="adminPanelDropdown">
+                                    <li><a class="dropdown-item" href="adminpanel.html">Admin Panel</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Report</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="viewcustomerReg.html">Customer Report</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="viewseller.html">Farmers Report</a></li>
+                                            <li><a class="dropdown-item" href="viewSellingProduce.html">Farmers Produce
+                                                    Report</a></li>
+                                            <li><a class="dropdown-item" href="viewadminpurchaserequest.html">Produce
+                                                    Purchase Request</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="viewpurchasereport.html">Produce Billing
+                                                    Report</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Farmer Settings</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="category.html?cattype=Produce">Add
+                                                    Produce Category</a></li>
+                                            <li><a class="dropdown-item" href="viewcategory.html?cattype=Produce">View
+                                                    Produce Category</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="Produce.html">Add Produce Types</a></li>
+                                            <li><a class="dropdown-item" href="viewProduce.html">View Produce Types</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Settings</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="chngadminpassword.html">Change my
+                                                    password</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header><!-- End Header -->
+
+
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="bg-light py-3">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Customer Registration Panel</h2>
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                    </ol>
+                </div>
+            </div>
+        </section><!-- End Breadcrumbs -->
+
+
+        <!-- ======= Registration Section ======= -->
+        <section class="container py-5">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card text-center mb-4">
+                        <div class="card-body">
+                            <h4>Register as Customer</h4>
+                            <img src="assets\img\customericon.jpg" class="img-fluid" alt="Customer Icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="card">
+                        <div class="card-body">
+                            <form method="post" action="" name="frmcstreg" onsubmit="return validatecstreg()">
+                                <input type="hidden" name="randnumber" value="123456789">
+                                <!-- Use a placeholder or static value -->
+
+                                <h4 class="card-title">Registration Panel</h4>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="customername">Customer Name <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" name="customername" id="customername" class="form-control">
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email_id">Email ID <span class="text-danger">*</span></label>
+                                        <input type="email" name="email_id" id="email_id" class="form-control">
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="password">Password <span class="text-danger">*</span></label>
+                                        <input type="password" name="password" id="password" class="form-control">
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="cpassword">Confirm Password <span
+                                                class="text-danger">*</span></label>
+                                        <input type="password" name="cpassword" id="cpassword" class="form-control">
+                                    </div>
+
+                                    <div class="col-12 mb-3">
+                                        <label for="address">Address <span class="text-danger">*</span></label>
+                                        <textarea name="address" id="address" class="form-control"></textarea>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="division">Division <span class="text-danger">*</span></label>
+                                        <span id='loaddivision'><select class="form-control">
+                                                <option>Select</option>
+                                            </select></span>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="city">City <span class="text-danger">*</span></label>
+                                        <span id='loadcity'><select class="form-control">
+                                                <option>Select</option>
+                                            </select></span>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="zipcode">Zipcode <span class="text-danger">*</span></label>
+                                        <input type="number" name="zipcode" id="zipcode" class="form-control">
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="cntctnum">Contact Number <span class="text-danger">*</span></label>
+                                        <input type="number" name="cntctnum" id="cntctnum" class="form-control">
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="mblnum">Mobile Number <span class="text-danger">*</span></label>
+                                        <input type="number" name="mblnum" id="mblnum" class="form-control">
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="customertype">Customer Type <span
+                                                class="text-danger">*</span></label>
+                                        <select name="customertype" id="customertype" class="form-control">
+                                            <option value="">Select</option>
+                                            <option value="Wholesaler">Wholesaler</option>
+                                            <option value="Retailer">Retailer</option>
+                                            <option value="Consumer">Consumer</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="status">Status <span class="text-danger">*</span></label>
+                                        <select name="status" id="status" class="form-control">
+                                            <option value="">Select</option>
+                                            <option value="Active">Active</option>
+                                            <option value="Inactive">Inactive</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <button type="submit" name="submit" id="submit"
+                                    class="btn btn-info btn-lg btn-block">Click here to Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Registration Section -->
+
+        <hr>
+    </main><!-- End #main -->
+
+    <!-- Footer -->
+    <?php include("footer.php"); ?>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script type="application/javascript">
+        function validatecstreg() {
+            var alphaExp = /^[a-zA-Z]+$/; // Variable to validate only alphabets
+            var alphaspaceExp = /^[a-zA-Z\s]+$/; // Variable to validate only alphabets and space
+            var numericExpression = /^[0-9]+$/; // Variable to validate only numbers
+            var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/; // Variable to validate Email ID
+
+            if (document.frmcstreg.customername.value == "") {
+                alert("Customer name should not be empty..");
+                document.frmcstreg.customername.focus();
+                return false;
+            } else if (!document.frmcstreg.customername.value.match(alphaspaceExp)) {
+                alert("Please enter only letters for Customer name..");
+                document.frmcstreg.customername.focus();
+                return false;
+            } else if (document.frmcstreg.address.value == "") {
+                alert("Address should not be empty..");
+                document.frmcstreg.address.focus();
+                return false;
+            } else if (document.frmcstreg.division.value == "") {
+                alert("Kindly select the division..");
+                document.frmcstreg.division.focus();
+                return false;
+            }
+            else if (document.frmcstreg.city.value == "") {
+                alert("Kindly select the city..");
+                document.frmcstreg.city.focus();
+                return false;
+            }
+            else if (document.frmcstreg.zipcode.value == "") {
+                alert("Kindly enter PIN Code..");
+                document.frmcstreg.zipcode.focus();
+                return false;
+            }
+            else if (document.frmcstreg.cntctnum.value == "") {
+                alert("Kindly enter Contact number..");
+                document.frmcstreg.cntctnum.focus();
+                return false;
+            }
+            else if (document.frmcstreg.mblnum.value == "") {
+                alert("Kindly enter Mobile number..");
+                document.frmcstreg.mblnum.focus();
+                return false;
+            }
+            else if (document.frmcstreg.email_id.value == "") {
+                alert("Kindly enter Email ID..");
+                document.frmcstreg.email_id.focus();
+                return false;
+            }
+            else if (!document.frmcstreg.email_id.value.match(emailExp)) {
+                alert("Kindly enter Valid Email ID.");
+                document.frmcstreg.email_id.focus();
+                return false;
+            }
+            else if (document.frmcstreg.password.value == "") {
+                alert("Password should not be empty..");
+                document.frmcstreg.password.focus();
+                return false;
+            }
+            else if (document.frmcstreg.password.value.length < 8) {
+                alert("Password length should be more than 8 characters...");
+                document.frmcstreg.password.focus();
+                return false;
+            }
+            else if (document.frmcstreg.password.value.length > 16) {
+                alert("Password length should be less than 16 characters...");
+                document.frmcstreg.password.focus();
+                return false;
+            }
+            else if (document.frmcstreg.cpassword.value == "") {
+                alert("Confirm password should not be empty..");
+                document.frmcstreg.cpassword.focus();
+                return false;
+            }
+            else if (document.frmcstreg.password.value != document.frmcstreg.cpassword.value) {
+                alert("Password and confirm password not matching...");
+                document.frmcstreg.cpassword.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+
+
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h3>AGRO</h3>
+                    <p>
+                        North South University, Bashundhara<br>
+                        Dhaka<br><br>
+                        <strong>Phone:</strong> +88012546525<br>
+                        <strong>Email:</strong> info@AGRO.com<br>
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h4>Our Services</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-chevron-right"></i> <a href="index.html" class="text-light">Home</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#" class="text-light">Farmer's Market</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#" class="text-light">Hire</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="contact.html" class="text-light">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h4>Staff Login</h4>
+                    <p>This feature is available only for Staff or Administrator</p>
+                    <button class="btn btn-success" type="button"
+                        onclick="window.location.href='adminloginpanel.html';">Click here to Login</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container d-md-flex justify-content-between align-items-center py-4 border-top">
+            <div class="text-center text-md-left mb-3 mb-md-0">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>THE AGRO LTD.</span></strong>. All Rights Reserved
+                </div>
+
+            </div>
+            <div class="credits">
+                Designed by <strong>Group 6</strong>
+            </div>
+            <div class="social-links text-center text-md-right">
+                <a href="#" class="text-light mx-2"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-light mx-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-light mx-2"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-light mx-2"><i class="bi bi-google"></i></a>
+                <a href="#" class="text-light mx-2"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <a href="#" class="back-to-top btn btn-light rounded-circle"
+        style="position: fixed; bottom: 20px; right: 20px; display: none;">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+
+    <!-- Latest Bootstrap 5 JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
