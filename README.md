@@ -1,8 +1,8 @@
 # Agriculture-Ecommerce
 
-# Agro
+## Agro
 
-## Project Setup Instructions
+### Project Setup Instructions
 
 1. **Clone/Download the Repository**
    - Clone or download the Agro repository from GitHub to your local machine.
@@ -27,5 +27,19 @@
      http://localhost/agro
      ```
    - The base URL for the project is `http://localhost/agro`.
+
+### Login Details
+
+- **Admin Login:**
+  - Username: `admin`
+  - Password: `admin123`
+
+- **Vendor Login (Agro Mall):**
+  - Username: `agro mall`
+  - Password: `1234`
+
+- **User Login (Example User):**
+  - Username: `arkakarmoker@gmail.com`
+  - Password: `1234`
 
 Thank you!
