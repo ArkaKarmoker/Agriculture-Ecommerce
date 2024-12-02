@@ -27,6 +27,13 @@
      http://localhost/agro
      ```
    - The base URL for the project is `http://localhost/agro`.
+   - gd extension must be enabled in `php.ini`.
+   - To enable the GD extension in XAMPP:
+
+      1. Open the `php.ini` file in the `C:\xampp\php` folder.
+      2. Search for `;extension=gd` and remove the semicolon (`;`).
+      3. Save the file.
+      4. Restart the **Apache** server from the XAMPP Control Panel.
 
 ### Login Details
 
