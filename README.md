@@ -35,7 +35,7 @@
   - Password: `admin123`
 
 - **Vendor Login (Agro Mall):**
-  - Username: `agro mall`
+  - Username: `agro`
   - Password: `1234`
 
 - **User Login (Example User):**
